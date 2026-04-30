@@ -6,7 +6,7 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 
 const userRoutes = require("./routes/user");
-const eventRoutes = require("./routes/event");
+const eventRoutes = require("./routes/Event");
 
 const app = express();
 const port = process.env.PORT || 5000;
