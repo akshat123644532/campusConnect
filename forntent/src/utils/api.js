@@ -1,4 +1,4 @@
-export const API_BASE = "http://localhost:5000/api";
+export const API_BASE = "https://campusconnect-2-4zj0.onrender.com/api";
 
 /* ── Token helpers ── */
 export const getToken = () => localStorage.getItem("cc_token");
