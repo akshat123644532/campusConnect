@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Event = require("../models/Event");
-const Register = require("../models/Register");
+const register = require("../models/register");
 const nodemailer = require("nodemailer");
 const auth = require("../middleware/auth");
 const isOrganizer = require("../middleware/isOrganizer"); // ✅ import
