@@ -11,21 +11,31 @@ const eventRoutes = require("./routes/event");
 const app = express();
 const port = process.env.PORT || 5000;
 
-// DB connect
+// ✅ DB connect
 connectDB();
 
-// middleware
-app.use(cors());
+// ✅ CORS (FINAL FIX)
+app.use(cors({
+  origin: [
+    "https://campus-connect-nine-livid.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
+// ✅ middleware
 app.use(express.json());
 
-// routes
+// ✅ routes
 app.use("/api/users", userRoutes);
 app.use("/api/events", eventRoutes);
 
+// ✅ test route
 app.get("/", (req, res) => {
   res.send("CampusConnect API Running");
 });
 
+// ✅ server start
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
