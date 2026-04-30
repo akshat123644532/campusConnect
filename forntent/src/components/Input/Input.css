@@ -1,0 +1,21 @@
+.cc-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cc-input--error {
+  border-color: var(--red) !important;
+  background: rgba(230, 57, 70, 0.05) !important;
+}
+
+.cc-input__required {
+  color: var(--red);
+}
+
+.cc-input__error-msg {
+  font-size: 11px;
+  color: var(--red);
+  margin-top: 5px;
+  letter-spacing: 0.04em;
+}

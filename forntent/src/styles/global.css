@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black:    #080808;
+  --white:    #f0ede6;
+  --red:      #e63946;
+  --red-dim:  #3a1215;
+  --red-mid:  #7a1f26;
+  --yellow:   #f4d35e;
+  --gray:     #111111;
+  --gray2:    #1a1a1a;
+  --gray3:    #2a2a2a;
+  --gray4:    #3d3d3d;
+  --muted:    #666666;
+  --muted2:   #444444;
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  --transition: 0.15s ease;
+}
+
+html, body, #root {
+  min-height: 100vh;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--gray4); }
+
+/* Scanline overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.07) 2px,
+    rgba(0, 0, 0, 0.07) 4px
+  );
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.anim-slide { animation: slideUp 0.35s ease forwards; }
+.anim-fade  { animation: fadeIn 0.3s ease forwards; }
+
+/* Global input reset */
+input, textarea, select {
+  background: var(--gray2);
+  border: 1px solid var(--gray4);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 11px 14px;
+  width: 100%;
+  outline: none;
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition);
+  appearance: none;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--red);
+  background: var(--gray3);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--muted2);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.4);
+  cursor: pointer;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid var(--gray3);
+  margin: 20px 0;
+}
+
+/* Label */
+.field-label {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}

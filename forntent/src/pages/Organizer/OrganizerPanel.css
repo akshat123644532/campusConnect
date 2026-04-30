@@ -1,0 +1,403 @@
+/* ── ORGANIZER PANEL ── */
+.org-panel {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem 4rem;
+}
+
+/* Header */
+.org-panel__title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #111;
+  margin-bottom: 2px;
+}
+
+.org-panel__subtitle {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Tabs ── */
+.org-panel__tabs {
+  display: flex;
+  gap: 2px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+}
+
+.org-panel__tab {
+  padding: 8px 18px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  margin-bottom: -1px;
+  transition: color 0.15s;
+}
+
+.org-panel__tab--active {
+  color: #111;
+  border-bottom-color: #111;
+  font-weight: 700;
+}
+
+/* ── Dashboard ── */
+.org-panel__dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Stat Cards */
+.org-panel__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.org-panel__stat {
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.org-panel__stat--blue  { background: #eff6ff; border: 1px solid #bfdbfe; }
+.org-panel__stat--green { background: #f0fdf4; border: 1px solid #bbf7d0; }
+.org-panel__stat--gray  { background: #f9fafb; border: 1px solid #e5e7eb; }
+
+.org-panel__stat-icon {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.org-panel__stat-val {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #111;
+  line-height: 1;
+}
+
+.org-panel__stat-label {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Section */
+.org-panel__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.org-panel__section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Quick Actions */
+.org-panel__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.org-panel__action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.org-panel__action-btn:hover {
+  border-color: #111;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* ── Event List ── */
+.org-panel__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.org-panel__empty {
+  text-align: center;
+  color: #9ca3af;
+  padding: 2.5rem;
+  font-size: 14px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px dashed #e5e7eb;
+}
+
+.org-panel__card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  transition: box-shadow 0.15s;
+}
+
+.org-panel__card:hover {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.org-panel__card-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.org-panel__card-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* keep old class for dashboard tab */
+.org-panel__card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.org-panel__card-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #111;
+}
+
+.org-panel__card-meta {
+  font-size: 13px;
+  color: #6b7280;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Badge */
+.org-panel__badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.org-panel__badge--green { background: #dcfce7; color: #166534; }
+.org-panel__badge--gray  { background: #f3f4f6; color: #6b7280;  }
+
+/* Delete button */
+.org-panel__btn-delete {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  background: none;
+  color: #dc2626;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.org-panel__btn-delete:hover {
+  background: #fef2f2;
+}
+
+/* ── Create Form ── */
+.org-panel__create-wrap {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.org-panel__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.org-panel__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.org-panel__field--full {
+  grid-column: 1 / -1;
+}
+
+.org-panel__field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.org-panel__field input,
+.org-panel__field textarea,
+.org-panel__field select {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #111;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.org-panel__field input:focus,
+.org-panel__field textarea:focus,
+.org-panel__field select:focus {
+  border-color: #111;
+  background: #fff;
+}
+
+.org-panel__field textarea {
+  resize: vertical;
+}
+
+.org-panel__form-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.org-panel__btn-create {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  letter-spacing: -0.01em;
+}
+
+.org-panel__btn-create:hover {
+  opacity: 0.82;
+}
+
+.org-panel__btn-create:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── Participants ── */
+.org-panel__participants-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.org-panel__btn-export {
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid #111;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+  margin-bottom: 1px;
+}
+
+.org-panel__btn-export:hover {
+  opacity: 0.8;
+}
+
+.org-panel__count {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Participants Table */
+.org-panel__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.org-panel__table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.org-panel__table td {
+  padding: 11px 12px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #111;
+}
+
+.org-panel__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.org-panel__table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.org-panel__table td:first-child {
+  color: #9ca3af;
+  font-weight: 600;
+  width: 36px;
+}
+
+.org-panel__table td:last-child {
+  color: #6b7280;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .org-panel__stats { grid-template-columns: 1fr; }
+  .org-panel__form  { grid-template-columns: 1fr; }
+  .org-panel__field--full { grid-column: 1; }
+  .org-panel__tab { font-size: 12px; padding: 8px 10px; }
+}

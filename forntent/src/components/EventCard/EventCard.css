@@ -1,0 +1,79 @@
+.cc-event-card {
+  background: var(--gray2);
+  border: 1px solid var(--gray3);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s, transform 0.2s;
+  border-radius: var(--radius-md);
+  animation: slideUp 0.35s ease forwards;
+  opacity: 0;
+}
+
+.cc-event-card:hover {
+  border-color: var(--red);
+  transform: translateY(-3px);
+}
+
+.cc-event-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cc-event-card__tag {
+  background: var(--red-dim);
+  color: var(--red);
+  font-size: 10px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+}
+
+.cc-event-card__date {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.cc-event-card__title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  line-height: 1.15;
+  color: var(--white);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.cc-event-card__desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.cc-event-card__venue {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.cc-event-card__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--yellow);
+  flex-shrink: 0;
+}
+
+.cc-event-card__divider {
+  border-top: 1px solid var(--gray3);
+  margin: 4px 0;
+}
